@@ -1,0 +1,12 @@
+
+h1{
+    color: blueviolet;
+}
+
+body{
+    background-color: rgb(33, 33, 33)  ;
+    background-image: url("/assets/css/endless-constellation.svg");
+    background-size: cover;
+    color: rgb(201, 201, 201) ;
+}
+
