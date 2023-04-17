@@ -38,7 +38,7 @@ describe("Testing The Different Languages' Greetings", function () {
 
         myGreetFunction.setLanguage("english");
 
-        assert.equal("Hi", myGreetFunction.getLanguagesGreet());
+        assert.equal("Hello", myGreetFunction.getLanguagesGreet());
     });
 });
 

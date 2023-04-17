@@ -8,15 +8,9 @@ if(localStorage['greet-count']){
     greetCounterElement.innerHTML = greetCounter ;
 }
 
-
-
 let myGreetFunction = greetUsers();
 var greetCounterElement = document.querySelector(".greet-counter");
 var greetUser = document.querySelector(".greet-msg");
-
-// ? My Name & Language Input 
-var nameInput = document.querySelector(".user-name-input").value;
-var languageInput = document.querySelector(".greetingLanguage:checked").value;
 
 
 function greetTheUser() {
@@ -29,11 +23,33 @@ function greetTheUser() {
 
 function setValues() {
     nameInput = document.querySelector(".user-name-input").value;
-    languageInput = document.querySelector(".greetingLanguage:checked").value;
+    languageInput = document.querySelector(".greetingLanguage:checked");  
 
-    myGreetFunction.setUserName(nameInput);
-    myGreetFunction.setLanguage(languageInput);
-    greetTheUser()
+    if(nameInput == "" && languageInput == null){
+        alert("enter your name and select language")
+    }else{
+        if(nameInput == ""){
+            alert("enter your name")
+        }else{
+            myGreetFunction.setUserName(nameInput);
+        }
+
+        if(languageInput == null){
+            alert("enter language")
+        }else{
+            myGreetFunction.setLanguage(languageInput.value);
+        }
+    }
+    
+
+    // ! when clearing the values, just set the value of radio buttons to "null"
+
+    if( nameInput=="" || languageInput == null ){
+
+    }else{
+        greetTheUser()
+    }
+    
 }
 
 const greetButton = document.querySelector(".greet-btn");
