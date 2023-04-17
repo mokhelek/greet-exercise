@@ -34,12 +34,12 @@ function setValues() {
         nameLanguageError.style.display = "block";
         setTimeout(()=>{
             nameLanguageError.style.display = "none";
-        },4000)    }else{
+        },3000)    }else{
         if(nameInput == ""){
             nameError.style.display = "block";
             setTimeout(()=>{
                 nameError.style.display = "none";
-            },4000)
+            },3000)
         }else{
             myGreetFunction.setUserName(nameInput);
         }
@@ -49,7 +49,7 @@ function setValues() {
             languageError.style.display = "block";
             setTimeout(()=>{
                 languageError.style.display = "none";
-            },4000)
+            },3000)
 
         }else{
             myGreetFunction.setLanguage(languageInput.value);
@@ -87,7 +87,7 @@ clearBtn.addEventListener("click",function (){
     resetSuccess.style.display = "block";
     setTimeout(()=>{
         resetSuccess.style.display = "none";
-    },4000)
+    },3000)
     
     setTimeout( ()=>{
         location.reload()
