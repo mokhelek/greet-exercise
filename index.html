@@ -13,6 +13,14 @@
         body{
             background-image: url("assets/images/endless-constellation.svg");
         }
+        @font-face {
+            font-family: Sanctuary;
+            src: url("assets/css/AdventureHollow-ra6B.ttf");
+        }
+        h1{
+            font-family: Sanctuary;
+            font-size: 3rem;
+        }
 
     </style>
     <body>
@@ -22,7 +30,7 @@
                 <div style="width: 65%" class="row">
                     <div class="col-lg-8">
                         <center>
-                            <center> <h1><strong>Greetings</strong></h1> </center>  
+                            <center> <h1 id="title-text"> Greetings </h1> </center>  
                             <div class="mb-3">
                                 <input style="border-radius: 0; background-color: rgba(255, 126, 255, 0.122); height: 50px; color: rgb(215, 215, 215); border: 2px rgb(235, 96, 120) dashed; box-shadow: none" class="form-control user-name-input" placeholder="type your name ..." />
                             </div>
@@ -68,7 +76,7 @@
                                 <hr>
                                 <p style="color: rgb(198, 165, 255); font-size: 1.3rem; margin-left: 1.6rem">
                                     <span class="greet-msg"> </span>
-                                    <span> <img style="width: 40px;display: none;" src="/assets/images/waving-hand-joypixels.gif" alt="waving hand" class="waving-hand" /> </span>
+                                    <span> <img style="width: 40px;display: none;" src="assets/images/waving-hand-joypixels.gif" alt="waving hand" class="waving-hand" /> </span>
                                 </p>
                             </center>
                         </div>
