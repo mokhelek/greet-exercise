@@ -24,25 +24,39 @@ function greetTheUser() {
 function setValues() {
     nameInput = document.querySelector(".user-name-input").value;
     languageInput = document.querySelector(".greetingLanguage:checked");  
+    let languageError = document.querySelector(".language-error");
+    let nameError = document.querySelector(".name-error");
+    let nameLanguageError = document.querySelector(".name-language-error");
+
+
 
     if(nameInput == "" && languageInput == null){
-        alert("enter your name and select language")
-    }else{
+        nameLanguageError.style.display = "block";
+        setTimeout(()=>{
+            nameLanguageError.style.display = "none";
+        },4000)    }else{
         if(nameInput == ""){
-            alert("enter your name")
+            nameError.style.display = "block";
+            setTimeout(()=>{
+                nameError.style.display = "none";
+            },4000)
         }else{
             myGreetFunction.setUserName(nameInput);
         }
 
         if(languageInput == null){
-            alert("enter language")
+            
+            languageError.style.display = "block";
+            setTimeout(()=>{
+                languageError.style.display = "none";
+            },4000)
+
         }else{
             myGreetFunction.setLanguage(languageInput.value);
         }
     }
     
 
-    // ! when clearing the values, just set the value of radio buttons to "null"
 
     if( nameInput=="" || languageInput == null ){
 
@@ -58,6 +72,7 @@ greetButton.addEventListener("click", setValues);
 
 const clearBtn = document.querySelector(".clear-btn");
 clearBtn.addEventListener("click",function (){
+
     localStorage.clear();
     nameInput = document.querySelector(".user-name-input");
     languageInput = document.querySelectorAll(".greetingLanguage");

@@ -33,3 +33,11 @@ h1{
     font-size: 4rem;
 }
 
+#validation-error{
+    border: 1px rgba(246, 76, 76, 0.453) solid;
+    border-radius: 25px;
+    background-color: rgba(238, 64, 64, 0.149);
+    color: rgb(250, 192, 192);padding: 0.5rem;
+    display: none;
+}
+
