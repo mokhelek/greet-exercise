@@ -5,8 +5,24 @@ h1{
 
 body{
     background-color: rgb(33, 33, 33)  ;
-    background-image: url("../images/endless-constellation.svg");
     background-size: cover;
     color: rgb(201, 201, 201) ;
+}
+
+#greet-btn {
+    background-color: rgb(255, 183, 48);
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    border: none;
+    background: linear-gradient(45deg, rgb(250, 219, 45) 0%, rgb(248, 45, 180) 50%, rgb(136, 45, 248) 100%);
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+#greet-btn:hover {
+    background: linear-gradient(45deg, rgb(136, 45, 248) 0%, rgb(224, 45, 248) 50%, rgb(250, 219, 45) 100%);
+    /* border: 3px rgb(255, 244, 252) dotted; */
+    transform: scale(1.1);
 }
 

@@ -60,10 +60,12 @@ const clearBtn = document.querySelector(".clear-btn");
 clearBtn.addEventListener("click",function (){
     localStorage.clear();
     nameInput = document.querySelector(".user-name-input");
-    languageInput = document.querySelector(".greetingLanguage:checked");  
-
+    languageInput = document.querySelectorAll(".greetingLanguage");
     nameInput.value = "";
-    languageInput.value = "";
+
+    for(let i =0; i < languageInput.length ; i ++){
+        languageInput[i].checked = false ;
+    }
     
     location.reload()
 })
