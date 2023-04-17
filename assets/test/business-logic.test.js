@@ -60,7 +60,7 @@ describe("Testing The Use Cases Of The Greetings Exercise", function () {
         myGreetFunction.setUserName("Nico");
         myGreetFunction.setLanguage("english");
 
-        assert.equal("Hi, Nico", myGreetFunction.getUserGreeting());
+        assert.equal("Hello, Nico", myGreetFunction.getUserGreeting());
         myGreetFunction.clearStorage()
 
     });

@@ -23,6 +23,8 @@ function greetTheUser() {
     myGreetFunction.getUserGreeting();
     greetUser.innerHTML = myGreetFunction.getUserGreeting();
     greetCounterElement.innerHTML = myGreetFunction.getCounter() ;
+    let wavingHand= document.querySelector(".waving-hand")
+    wavingHand.style.display = "inline-block";
 }
 
 function setValues() {
