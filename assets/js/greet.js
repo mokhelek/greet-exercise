@@ -59,6 +59,12 @@ greetButton.addEventListener("click", setValues);
 const clearBtn = document.querySelector(".clear-btn");
 clearBtn.addEventListener("click",function (){
     localStorage.clear();
+    nameInput = document.querySelector(".user-name-input");
+    languageInput = document.querySelector(".greetingLanguage:checked");  
+
+    nameInput.value = "";
+    languageInput.value = "";
+    
     location.reload()
 })
 
