@@ -72,6 +72,7 @@ greetButton.addEventListener("click", setValues);
 
 const clearBtn = document.querySelector(".clear-btn");
 clearBtn.addEventListener("click",function (){
+    let resetSuccess = document.querySelector(".reset-success");
 
     localStorage.clear();
     nameInput = document.querySelector(".user-name-input");
@@ -82,7 +83,16 @@ clearBtn.addEventListener("click",function (){
         languageInput[i].checked = false ;
     }
     
-    location.reload()
+
+    resetSuccess.style.display = "block";
+    setTimeout(()=>{
+        resetSuccess.style.display = "none";
+    },4000)
+    
+    setTimeout( ()=>{
+        location.reload()
+    },3000 )
+    
 })
 
 

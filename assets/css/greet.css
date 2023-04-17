@@ -40,4 +40,32 @@ h1{
     color: rgb(250, 192, 192);padding: 0.5rem;
     display: none;
 }
+#validation-success{
+    border: 1px rgba(127, 246, 76, 0.453) solid;
+    border-radius: 25px;
+    background-color: rgba(64, 238, 76, 0.149);
+    color: rgb(190, 252, 173);padding: 0.5rem;
+    display: none;
+}
 
+#name-input{
+    border-radius: 0;
+    background-color: rgba(255, 126, 255, 0.122);
+    border: 2px rgb(235, 96, 120) dashed; box-shadow: none;
+    height: 50px; color: rgb(215, 215, 215);
+}
+#radios{
+    margin: 2rem 0rem 2rem 0rem;
+}
+#counter-box{
+    border: 2px rgb(209, 42, 255) dashed;
+     box-shadow: 0 0 6px purple
+}
+.greet-counter{
+    font-size: 7rem; 
+    font-weight: 900;
+}
+#counter-subtext{
+    font-size: 1.2rem;
+    color:rgb(222, 193, 250);
+}
