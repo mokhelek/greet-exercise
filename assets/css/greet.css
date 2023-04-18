@@ -1,9 +1,10 @@
 
 
 body{
-    background-color: rgb(33, 33, 33)  ;
+    background-color: rgb(66, 66, 66)  ;
     background-size: cover;
     color: rgb(201, 201, 201) ;
+
 }
 
 #greet-btn {
@@ -31,6 +32,7 @@ h1{
 
 #title-text{
     font-size: 4rem;
+    text-shadow: 0 0 6px rgb(252, 147, 165);
 }
 
 #validation-error{
@@ -53,6 +55,7 @@ h1{
     background-color: rgba(255, 126, 255, 0.122);
     border: 2px rgb(235, 96, 120) dashed; box-shadow: none;
     height: 50px; color: rgb(215, 215, 215);
+    
 }
 #radios{
     margin: 2rem 0rem 2rem 0rem;
@@ -64,6 +67,8 @@ h1{
 .greet-counter{
     font-size: 7rem; 
     font-weight: 900;
+    text-shadow: 0 0 6px rgb(252, 147, 165);
+
 }
 #counter-subtext{
     font-size: 1.2rem;

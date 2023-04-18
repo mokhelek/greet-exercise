@@ -67,6 +67,12 @@ function greetUsers() {
         localStorage.clear();
     }
 
+    function checkValidName() {
+        const regex = /^[A-Za-z\s]+$/
+        let userName = getUserName();
+        return regex.test(userName);
+    }
+
     return {
         getUserName,
         getCounter,
@@ -79,5 +85,6 @@ function greetUsers() {
         greetCounter,
 
         clearStorage,
+        checkValidName,
     };
 }

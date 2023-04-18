@@ -1,77 +1,67 @@
-
 var greetCounter = 0;
 
-if(localStorage['greet-count']){
-    greetCounter = Number(localStorage['greet-count']);
+if (localStorage["greet-count"]) {
+    greetCounter = Number(localStorage["greet-count"]);
 
     var greetCounterElement = document.querySelector(".greet-counter");
-    greetCounterElement.innerHTML = greetCounter ;
+    greetCounterElement.innerHTML = greetCounter;
 }
 
 let myGreetFunction = greetUsers();
 var greetCounterElement = document.querySelector(".greet-counter");
 var greetUser = document.querySelector(".greet-msg");
 
-
 function greetTheUser() {
     myGreetFunction.getUserGreeting();
     greetUser.innerHTML = myGreetFunction.getUserGreeting();
-    greetCounterElement.innerHTML = myGreetFunction.getCounter() ;
-    let wavingHand= document.querySelector(".waving-hand")
+    greetCounterElement.innerHTML = myGreetFunction.getCounter();
+    let wavingHand = document.querySelector(".waving-hand");
     wavingHand.style.display = "inline-block";
 }
 
 function setValues() {
     nameInput = document.querySelector(".user-name-input").value;
-    languageInput = document.querySelector(".greetingLanguage:checked");  
+    languageInput = document.querySelector(".greetingLanguage:checked");
     let languageError = document.querySelector(".language-error");
     let nameError = document.querySelector(".name-error");
     let nameLanguageError = document.querySelector(".name-language-error");
 
-
-
-    if(nameInput == "" && languageInput == null){
+    if (nameInput == "" && languageInput == null) {
         nameLanguageError.style.display = "block";
-        setTimeout(()=>{
+        setTimeout(() => {
             nameLanguageError.style.display = "none";
-        },3000)    }else{
-        if(nameInput == ""){
+        }, 3000);
+    } else {
+        if (nameInput == "") {
             nameError.style.display = "block";
-            setTimeout(()=>{
+            setTimeout(() => {
                 nameError.style.display = "none";
-            },3000)
-        }else{
+            }, 3000);
+        } else {
             myGreetFunction.setUserName(nameInput);
         }
 
-        if(languageInput == null){
-            
+        if (languageInput == null) {
             languageError.style.display = "block";
-            setTimeout(()=>{
+            setTimeout(() => {
                 languageError.style.display = "none";
-            },3000)
-
-        }else{
+            }, 3000);
+        } else {
             myGreetFunction.setLanguage(languageInput.value);
         }
     }
-    
 
-
-    if( nameInput=="" || languageInput == null ){
-
-    }else{
-        greetTheUser()
+    if (nameInput == "" || languageInput == null) {
+    } else {
+        greetTheUser();
     }
-    
 }
 
 const greetButton = document.querySelector(".greet-btn");
 greetButton.addEventListener("click", setValues);
 
-
 const clearBtn = document.querySelector(".clear-btn");
-clearBtn.addEventListener("click",function (){
+clearBtn.addEventListener("click", function () {
     let resetSuccess = document.querySelector(".reset-success");
 
     localStorage.clear();
@@ -79,20 +69,16 @@ clearBtn.addEventListener("click",function (){
     languageInput = document.querySelectorAll(".greetingLanguage");
     nameInput.value = "";
 
-    for(let i =0; i < languageInput.length ; i ++){
-        languageInput[i].checked = false ;
+    for (let i = 0; i < languageInput.length; i++) {
+        languageInput[i].checked = false;
     }
-    
 
     resetSuccess.style.display = "block";
-    setTimeout(()=>{
+    setTimeout(() => {
         resetSuccess.style.display = "none";
-    },3000)
-    
-    setTimeout( ()=>{
-        location.reload()
-    },3000 )
-    
-})
+    }, 2000);
 
-
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
+});

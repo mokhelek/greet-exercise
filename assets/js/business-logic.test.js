@@ -209,33 +209,76 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
         myGreetFunction.clearStorage()
     })
 
-
-    // it("Should display an integer of greeted users, 5 users in this case", function (){
-    //     let myGreetFunction = greetUsers();
-
-    //     myGreetFunction.setUserName("Kat");
-    //     myGreetFunction.setLanguage("xhosa");
-    //     myGreetFunction.getUserGreeting();
+})
+describe("Checking if Valid Inputs have been provided", function (){
+    it("Should return true if name contains only numbers", function (){
+        let myGreetFunction = greetUsers();
 
 
-    //     myGreetFunction.setUserName("John");
-    //     myGreetFunction.setLanguage("english");
-    //     myGreetFunction.getUserGreeting();
+        myGreetFunction.setUserName("paul");
+  
+
+        myGreetFunction.checkValidName()
 
 
-    //     myGreetFunction.setUserName("Smith");
-    //     myGreetFunction.setLanguage("english");
-    //     myGreetFunction.getUserGreeting();
+        assert.equal(true,myGreetFunction.checkValidName())
+        myGreetFunction.clearStorage()
+    })
 
-    //     myGreetFunction.setUserName("Mary");
-    //     myGreetFunction.setLanguage("sesotho");
-    //     myGreetFunction.getUserGreeting();
+    it("Should return false if name contains any numbers", function (){
+        let myGreetFunction = greetUsers();
 
 
-    //     myGreetFunction.setUserName("Nicolas");
-    //     myGreetFunction.setLanguage("english");
-    //     myGreetFunction.getUserGreeting();
+        myGreetFunction.setUserName("Paul25");
+  
 
-    //     assert.equal(5 , myGreetFunction.getCounter() ) ;
-    // })
+        myGreetFunction.checkValidName()
+
+
+        assert.equal(false,myGreetFunction.checkValidName())
+        myGreetFunction.clearStorage()
+    })
+
+    it("Should return true if name contains any spaces", function (){
+        let myGreetFunction = greetUsers();
+
+
+        myGreetFunction.setUserName("Mokhele Katleho");
+  
+
+        myGreetFunction.checkValidName()
+
+
+        assert.equal(true,myGreetFunction.checkValidName())
+        myGreetFunction.clearStorage()
+    })
+
+    it("Should return false if name contains any symbols", function (){
+        let myGreetFunction = greetUsers();
+
+
+        myGreetFunction.setUserName("Mokhele Katleho!");
+  
+
+        myGreetFunction.checkValidName()
+
+
+        assert.equal(false,myGreetFunction.checkValidName())
+        myGreetFunction.clearStorage()
+    })
+
+    it("Should return false if name input is blank", function (){
+        let myGreetFunction = greetUsers();
+
+
+        myGreetFunction.setUserName("");
+  
+
+        myGreetFunction.checkValidName()
+
+
+        assert.equal(false,myGreetFunction.checkValidName())
+        myGreetFunction.clearStorage()
+    })
+
 })
