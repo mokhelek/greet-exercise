@@ -1,4 +1,5 @@
 function greetUsers() {
+
     var greetCounter = 0;
     if (localStorage["greet-count"]) {
         greetCounter = Number(localStorage["greet-count"]);
@@ -8,7 +9,7 @@ function greetUsers() {
     var greetedUsers = {};
 
     function setUserName(userName) {
-        greetedUserName = userName;
+        greetedUserName = userName.toLowerCase() ;
     }
 
     function getUserName() {
@@ -67,9 +68,8 @@ function greetUsers() {
         localStorage.clear();
     }
 
-    function checkValidName() {
+    function checkValidName(userName) {
         const regex = /^[A-Za-z\s]+$/
-        let userName = getUserName();
         return regex.test(userName);
     }
 

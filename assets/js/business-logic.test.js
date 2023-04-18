@@ -211,17 +211,11 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
 
 })
 describe("Checking if Valid Inputs have been provided", function (){
-    it("Should return true if name contains only numbers", function (){
+    it("Should return true if name contains only letter", function (){
         let myGreetFunction = greetUsers();
 
 
-        myGreetFunction.setUserName("paul");
-  
-
-        myGreetFunction.checkValidName()
-
-
-        assert.equal(true,myGreetFunction.checkValidName())
+        assert.equal(true,myGreetFunction.checkValidName("paul"))
         myGreetFunction.clearStorage()
     })
 
@@ -229,27 +223,15 @@ describe("Checking if Valid Inputs have been provided", function (){
         let myGreetFunction = greetUsers();
 
 
-        myGreetFunction.setUserName("Paul25");
-  
-
-        myGreetFunction.checkValidName()
-
-
-        assert.equal(false,myGreetFunction.checkValidName())
+        assert.equal(false,myGreetFunction.checkValidName("Paul25"))
         myGreetFunction.clearStorage()
     })
 
-    it("Should return true if name contains any spaces", function (){
+    it("Should return true if name contains spaces", function (){
         let myGreetFunction = greetUsers();
 
 
-        myGreetFunction.setUserName("Mokhele Katleho");
-  
-
-        myGreetFunction.checkValidName()
-
-
-        assert.equal(true,myGreetFunction.checkValidName())
+        assert.equal(true,myGreetFunction.checkValidName("Mokhele Katleho") )
         myGreetFunction.clearStorage()
     })
 
@@ -257,13 +239,7 @@ describe("Checking if Valid Inputs have been provided", function (){
         let myGreetFunction = greetUsers();
 
 
-        myGreetFunction.setUserName("Mokhele Katleho!");
-  
-
-        myGreetFunction.checkValidName()
-
-
-        assert.equal(false,myGreetFunction.checkValidName())
+        assert.equal(false,myGreetFunction.checkValidName("Mokhele Katleho!") )
         myGreetFunction.clearStorage()
     })
 
@@ -271,13 +247,7 @@ describe("Checking if Valid Inputs have been provided", function (){
         let myGreetFunction = greetUsers();
 
 
-        myGreetFunction.setUserName("");
-  
-
-        myGreetFunction.checkValidName()
-
-
-        assert.equal(false,myGreetFunction.checkValidName())
+        assert.equal(false,myGreetFunction.checkValidName("") )
         myGreetFunction.clearStorage()
     })
 

@@ -20,11 +20,13 @@ function greetTheUser() {
 }
 
 function setValues() {
-    nameInput = document.querySelector(".user-name-input").value;
+    nameInput = document.querySelector(".user-name-input").value ;
     languageInput = document.querySelector(".greetingLanguage:checked");
     let languageError = document.querySelector(".language-error");
     let nameError = document.querySelector(".name-error");
     let nameLanguageError = document.querySelector(".name-language-error");
+    let invalidNameError = document.querySelector(".invalid-name-error");
+
 
     if (nameInput == "" && languageInput == null) {
         nameLanguageError.style.display = "block";
@@ -37,9 +39,21 @@ function setValues() {
             setTimeout(() => {
                 nameError.style.display = "none";
             }, 3000);
-        } else {
+        }else if(myGreetFunction.checkValidName(nameInput) == false){
+            invalidNameError.style.display = "block";
+            setTimeout(() => {
+                invalidNameError.style.display = "none";
+            }, 3000);
+        }
+         else {
             myGreetFunction.setUserName(nameInput);
         }
+
+
+
+
+
+
 
         if (languageInput == null) {
             languageError.style.display = "block";
