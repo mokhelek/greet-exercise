@@ -54,12 +54,14 @@ function setValues() {
 
 
         users = myGreetFunction.getGreetedUsers()
-        stringUsers = JSON.stringify(users)
-        if( (stringUsers ).includes(nameInput) ){
-            userExistError.style.display = "block";
-            setTimeout(() => {
-                userExistError.style.display = "none";
-            }, 3000);
+        stringUsers = JSON.stringify(users).trim()
+        if(nameInput != ""){
+            if( (stringUsers ).includes(nameInput) ){
+                userExistError.style.display = "block";
+                setTimeout(() => {
+                    userExistError.style.display = "none";
+                }, 3000);
+            }
         }
 
 

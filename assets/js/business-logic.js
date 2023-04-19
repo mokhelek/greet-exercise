@@ -21,7 +21,7 @@ function greetUsers() {
     }
 
     function setCounter() {
-        if (greetedUsers[getUserName()] === undefined) {
+        if (greetedUsers[getUserName()] === undefined && getUserName() != "" ) {
             greetCounter++;
             greetedUsers[getUserName()] = 0;
             localStorage["greet-count"] = greetCounter;
