@@ -12,7 +12,7 @@ describe("Testing The Business Logic Of My Greet Exercise", function () {
 
         myGreetFunction.setUserName("John");
 
-        assert.equal("John", myGreetFunction.getUserName());
+        assert.equal("john", myGreetFunction.getUserName());
     });
 });
 
@@ -47,10 +47,10 @@ describe("Testing The Use Cases Of The Greetings Exercise", function () {
     it("should greet Katleho in Sesotho", function () {
         let myGreetFunction = greetUsers();
 
-        myGreetFunction.setUserName("Katleho");
+        myGreetFunction.setUserName("katleho");
         myGreetFunction.setLanguage("sesotho");
 
-        assert.equal("Dumela, Katleho", myGreetFunction.getUserGreeting());
+        assert.equal("Dumela, katleho", myGreetFunction.getUserGreeting());
 
     });
 
@@ -60,7 +60,7 @@ describe("Testing The Use Cases Of The Greetings Exercise", function () {
         myGreetFunction.setUserName("Nico");
         myGreetFunction.setLanguage("english");
 
-        assert.equal("Hello, Nico", myGreetFunction.getUserGreeting());
+        assert.equal("Hello, nico", myGreetFunction.getUserGreeting());
         myGreetFunction.clearStorage()
 
     });
@@ -72,7 +72,7 @@ describe("Testing The Use Cases Of The Greetings Exercise", function () {
         myGreetFunction.setUserName("Bjorn");
         myGreetFunction.setLanguage("xhosa");
 
-        assert.equal("Molo, Bjorn", myGreetFunction.getUserGreeting());
+        assert.equal("Molo, bjorn", myGreetFunction.getUserGreeting());
         myGreetFunction.clearStorage()
 
     });
@@ -83,17 +83,17 @@ describe("Testing My Counter Functionality", function(){
     it("Should display an integer of greeted users, 3 users in this case", function (){
         let myGreetFunction = greetUsers();
         
-        myGreetFunction.setUserName("Kat");
+        myGreetFunction.setUserName("kat");
         myGreetFunction.setLanguage("xhosa");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("John");
+        myGreetFunction.setUserName("john");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("Paul");
+        myGreetFunction.setUserName("paul");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
@@ -104,26 +104,26 @@ describe("Testing My Counter Functionality", function(){
     it("Should display an integer of greeted users, 5 users in this case", function (){
         let myGreetFunction = greetUsers();
 
-        myGreetFunction.setUserName("Kat");
+        myGreetFunction.setUserName("kat");
         myGreetFunction.setLanguage("xhosa");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("John");
+        myGreetFunction.setUserName("john");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("Smith");
+        myGreetFunction.setUserName("smith");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
-        myGreetFunction.setUserName("Mary");
+        myGreetFunction.setUserName("mary");
         myGreetFunction.setLanguage("sesotho");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("Nicolas");
+        myGreetFunction.setUserName("nicolas");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
@@ -137,26 +137,26 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
         let myGreetFunction = greetUsers();
 
         
-        myGreetFunction.setUserName("Kat");
+        myGreetFunction.setUserName("kat");
         myGreetFunction.setLanguage("xhosa");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("John");
+        myGreetFunction.setUserName("john");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("Paul");
+        myGreetFunction.setUserName("paul");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
 
-        myGreetFunction.setUserName("Paul");
+        myGreetFunction.setUserName("paul");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
-        myGreetFunction.setUserName("Paul");
+        myGreetFunction.setUserName("paul");
         myGreetFunction.setLanguage("english");
         myGreetFunction.getUserGreeting();
 
@@ -169,7 +169,7 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
         let myGreetFunction = greetUsers();
         
 
-        myGreetFunction.setUserName("Kat");
+        myGreetFunction.setUserName("kat");
         myGreetFunction.setLanguage("xhosa");
         myGreetFunction.getUserGreeting();
 

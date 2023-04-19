@@ -17,6 +17,7 @@ function greetTheUser() {
     greetCounterElement.innerHTML = myGreetFunction.getCounter();
     let wavingHand = document.querySelector(".waving-hand");
     wavingHand.style.display = "inline-block";
+
 }
 
 function setValues() {
@@ -26,6 +27,7 @@ function setValues() {
     let nameError = document.querySelector(".name-error");
     let nameLanguageError = document.querySelector(".name-language-error");
     let invalidNameError = document.querySelector(".invalid-name-error");
+    let userExistError = document.querySelector(".name-exists-error");
 
 
     if (nameInput == "" && languageInput == null) {
@@ -51,8 +53,14 @@ function setValues() {
 
 
 
-
-
+        users = myGreetFunction.getGreetedUsers()
+        stringUsers = JSON.stringify(users)
+        if( (stringUsers ).includes(nameInput) ){
+            userExistError.style.display = "block";
+            setTimeout(() => {
+                userExistError.style.display = "none";
+            }, 3000);
+        }
 
 
         if (languageInput == null) {

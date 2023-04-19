@@ -16,11 +16,17 @@ function greetUsers() {
         return greetedUserName;
     }
 
+    function userExist(validate){
+        return validate;
+    }
+
     function setCounter() {
         if (greetedUsers[getUserName()] === undefined) {
             greetCounter++;
             greetedUsers[getUserName()] = 0;
             localStorage["greet-count"] = greetCounter;
+        }else{
+            userExist(false);
         }
         greetedUsers[getUserName()]++;
     }
@@ -86,5 +92,6 @@ function greetUsers() {
 
         clearStorage,
         checkValidName,
+        userExist,
     };
 }

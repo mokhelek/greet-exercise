@@ -42,6 +42,16 @@ h1{
     color: rgb(250, 192, 192);padding: 0.5rem;
     display: none;
 }
+
+#user-exist-error{
+    border: 1px rgba(246, 204, 76, 0.453) solid;
+    border-radius: 25px;
+    background-color: rgba(245, 179, 71, 0.149);
+    color: rgb(249, 214, 173);padding: 0.5rem;
+    display: none;
+}
+
+
 #validation-success{
     border: 1px rgba(127, 246, 76, 0.453) solid;
     border-radius: 25px;
