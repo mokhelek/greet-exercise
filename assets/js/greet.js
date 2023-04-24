@@ -1,13 +1,14 @@
+
 var greetCounter = 0;
 
 if (localStorage["greet-count"]) {
     greetCounter = Number(localStorage["greet-count"]);
-
-    var greetCounterElement = document.querySelector(".greet-counter");
-    greetCounterElement.innerHTML = greetCounter;
 }
+let myGreetFunction = greetUsers(greetCounter);
 
-let myGreetFunction = greetUsers();
+var greetCounterElement = document.querySelector(".greet-counter");
+greetCounterElement.innerHTML = greetCounter;
+
 var greetCounterElement = document.querySelector(".greet-counter");
 var greetUser = document.querySelector(".greet-msg");
 
@@ -17,18 +18,17 @@ function greetTheUser() {
     greetCounterElement.innerHTML = myGreetFunction.getCounter();
     let wavingHand = document.querySelector(".waving-hand");
     wavingHand.style.display = "inline-block";
-
+    localStorage["greet-count"] = myGreetFunction.getCounter() ; 
 }
 
 function setValues() {
-    nameInput = document.querySelector(".user-name-input").value ;
+    nameInput = document.querySelector(".user-name-input").value;
     languageInput = document.querySelector(".greetingLanguage:checked");
     let languageError = document.querySelector(".language-error");
     let nameError = document.querySelector(".name-error");
     let nameLanguageError = document.querySelector(".name-language-error");
     let invalidNameError = document.querySelector(".invalid-name-error");
     let userExistError = document.querySelector(".name-exists-error");
-
 
     if (nameInput == "" && languageInput == null) {
         nameLanguageError.style.display = "block";
@@ -41,29 +41,25 @@ function setValues() {
             setTimeout(() => {
                 nameError.style.display = "none";
             }, 3000);
-        }else if(myGreetFunction.checkValidName(nameInput) == false){
+        } else if (myGreetFunction.checkValidName(nameInput) == false) {
             invalidNameError.style.display = "block";
             setTimeout(() => {
                 invalidNameError.style.display = "none";
             }, 3000);
-        }
-         else {
+        } else {
             myGreetFunction.setUserName(nameInput);
         }
 
-
-
-        users = myGreetFunction.getGreetedUsers()
-        stringUsers = JSON.stringify(users).trim()
-        if(nameInput != ""){
-            if( (stringUsers ).includes(nameInput) ){
+        users = myGreetFunction.getGreetedUsers();
+        stringUsers = JSON.stringify(users).trim();
+        if (nameInput != "") {
+            if (stringUsers.includes(nameInput)) {
                 userExistError.style.display = "block";
                 setTimeout(() => {
                     userExistError.style.display = "none";
                 }, 3000);
             }
         }
-
 
         if (languageInput == null) {
             languageError.style.display = "block";

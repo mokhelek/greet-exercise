@@ -84,3 +84,10 @@ h1{
     font-size: 1.2rem;
     color:rgb(222, 193, 250);
 }
+
+
+@media screen and (max-width:450px) {
+    #content-width{
+        width: 85% !important;
+    }
+}

@@ -1,9 +1,7 @@
-function greetUsers() {
+function greetUsers(counter) {
 
-    var greetCounter = 0;
-    if (localStorage["greet-count"]) {
-        greetCounter = Number(localStorage["greet-count"]);
-    }
+    var greetCounter = counter || 0;
+
     let greetedUserName = "";
     let greetLanguage = "";
     var greetedUsers = {};
@@ -24,7 +22,7 @@ function greetUsers() {
         if (greetedUsers[getUserName()] === undefined && getUserName() != "" ) {
             greetCounter++;
             greetedUsers[getUserName()] = 0;
-            localStorage["greet-count"] = greetCounter;
+           
         }else{
             userExist(false);
         }
@@ -33,12 +31,7 @@ function greetUsers() {
 
     function getCounter() {
        
-        if (localStorage["greet-count"]) {
-            greetCounter = Number(localStorage["greet-count"]);
-            return greetCounter;
-        } else {
-            return greetCounter;
-        }
+        return greetCounter;
     }
 
     function setLanguage(language) {

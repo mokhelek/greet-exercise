@@ -61,7 +61,7 @@ describe("Testing The Use Cases Of The Greetings Exercise", function () {
         myGreetFunction.setLanguage("english");
 
         assert.equal("Hello, nico", myGreetFunction.getUserGreeting());
-        myGreetFunction.clearStorage()
+   
 
     });
 
@@ -98,7 +98,6 @@ describe("Testing My Counter Functionality", function(){
         myGreetFunction.getUserGreeting();
 
         assert.equal(3 , myGreetFunction.getCounter() ) ;
-        myGreetFunction.clearStorage()
     })
 
     it("Should display an integer of greeted users, 5 users in this case", function (){
@@ -128,7 +127,6 @@ describe("Testing My Counter Functionality", function(){
         myGreetFunction.getUserGreeting();
 
         assert.equal(5 , myGreetFunction.getCounter() ) ;
-        myGreetFunction.clearStorage()
     })
 })
 
@@ -162,7 +160,6 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
 
 
         assert.equal(3 , myGreetFunction.getCounter() ) ;
-        myGreetFunction.clearStorage()
     })
 
     it("Should display an integer of unique greeted users, 5 users in this case ", function (){
@@ -206,7 +203,6 @@ describe("Testing My 'Unique User Counter' functionality ", function(){
 
 
         assert.equal(5 , myGreetFunction.getCounter() ) ;
-        myGreetFunction.clearStorage()
     })
 
 })
@@ -216,7 +212,6 @@ describe("Checking if Valid Inputs have been provided", function (){
 
 
         assert.equal(true,myGreetFunction.checkValidName("paul"))
-        myGreetFunction.clearStorage()
     })
 
     it("Should return false if name contains any numbers", function (){
@@ -224,7 +219,6 @@ describe("Checking if Valid Inputs have been provided", function (){
 
 
         assert.equal(false,myGreetFunction.checkValidName("Paul25"))
-        myGreetFunction.clearStorage()
     })
 
     it("Should return true if name contains spaces", function (){
@@ -232,7 +226,6 @@ describe("Checking if Valid Inputs have been provided", function (){
 
 
         assert.equal(true,myGreetFunction.checkValidName("Mokhele Katleho") )
-        myGreetFunction.clearStorage()
     })
 
     it("Should return false if name contains any symbols", function (){
@@ -240,7 +233,6 @@ describe("Checking if Valid Inputs have been provided", function (){
 
 
         assert.equal(false,myGreetFunction.checkValidName("Mokhele Katleho!") )
-        myGreetFunction.clearStorage()
     })
 
     it("Should return false if name input is blank", function (){
@@ -248,7 +240,6 @@ describe("Checking if Valid Inputs have been provided", function (){
 
 
         assert.equal(false,myGreetFunction.checkValidName("") )
-        myGreetFunction.clearStorage()
     })
 
 })
